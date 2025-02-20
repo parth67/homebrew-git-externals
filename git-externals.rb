@@ -10,11 +10,13 @@ class GitExternals < Formula
     depends_on "jq"
   
     def install
-      bin.install "git-externals.py" => "git-externals"
-      man1.install "git-externals.1"
-      bash_completion.install "git-externals-completion.sh"
-      zsh_completion.install "git-externals-completion.sh"
-    end
+        extracted_dir = "git-externals-#{version}"  # Dynamically set the directory
+    
+        bin.install "#{extracted_dir}/git-externals.py" => "git-externals"
+        man1.install "#{extracted_dir}/git-externals.1"
+        bash_completion.install "#{extracted_dir}/git-externals-completion.sh"
+        zsh_completion.install "#{extracted_dir}/git-externals-completion.sh"
+      end
   
     def post_install
       system "mandb", ">/dev/null", "2>&1"
