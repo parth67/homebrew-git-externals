@@ -1,8 +1,8 @@
 class GitExternals < Formula
     desc "Manage external Git repositories like SVN externals"
     homepage "https://github.com/parth67/git-externals"
-    url "https://github.com/parth67/git-externals/archive/v1.0.1.tar.gz"
-    sha256 "8d233842dd296bc972883d4d68bc1eaef95afdc67aece0c9565c0da29694cc76"
+    url "https://github.com/parth67/git-externals/archive/v1.0.0.tar.gz"
+    sha256 "0c7457073f19ef7f94682ca0d8f06a875cd3393c924b5b8fa0e6d4dde8dc96ec"
     license "MIT"
     version "1.0.1"
 
@@ -13,8 +13,8 @@ class GitExternals < Formula
 
         bin.install "git-externals.py" => "git-externals"
         man1.install "git-externals.1"
-        bash_completion.install "completion/bash/bash_completion.sh"
-        zsh_completion.install "completion/zsh/_zsh_completion"
+        bash_completion.install "completion/bash/bash_completion.bash" => "git-externals-completion.bash"
+        zsh_completion.install "completion/zsh/_git-externals" => "_git-externals"
       end
 
     def post_install
