@@ -1,4 +1,4 @@
-# **🍺 Homebrew Tap for `git-externals`** 🚀  
+# ** Homebrew Tap for `git-externals`** 🚀  
 *A Homebrew package for managing external Git repositories like SVN externals*  
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
